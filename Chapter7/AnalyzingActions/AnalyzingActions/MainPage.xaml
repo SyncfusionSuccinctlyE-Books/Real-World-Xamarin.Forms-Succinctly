@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalyzingActions.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+        <Button x:Name="FirstPageButton"
+                Text="Open first page"
+                Clicked="FirstPageButton_Clicked"/>
+
+        <Button x:Name="SecondPageButton"
+                Text="Open second page"
+                Clicked="SecondPageButton_Clicked"/>
+
+        <Button x:Name="HelpButton" 
+                Text="Help"
+                Clicked="HelpButton_Clicked"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiometricAuthentication.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Set your password:"/>
+            <Entry IsPassword="True" x:Name="PasswordEntry" />
+            <Button Text="Save password" x:Name="SavePasswordButton"
+                    Clicked="SavePasswordButton_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

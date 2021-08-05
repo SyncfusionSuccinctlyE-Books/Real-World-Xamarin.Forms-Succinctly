@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformCapabilities.NoNetworkSnackBarView">
+  <ContentView.Content>
+        <Grid>
+            <Frame
+        BackgroundColor="PaleVioletRed"
+        BorderColor="Red"
+        CornerRadius="10"
+        VerticalOptions="End"
+        HasShadow="False"
+        Padding="16">
+
+                <StackLayout
+            Orientation="Horizontal"
+            Spacing="16"
+            Margin="0"
+            Padding="0">
+                    <Image
+                Source="ExclamationMark.png"
+                HorizontalOptions="Start"
+                HeightRequest="20"
+                WidthRequest="20"
+                VerticalOptions="CenterAndExpand" />
+
+                    <StackLayout
+                Margin="10,0,0,0"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="StartAndExpand"
+                Orientation="Vertical"
+                Spacing="5">
+                        <Label TextColor="White"
+                               FontSize="Medium"
+                               Text="Internet connection unavailable..." 
+                               HorizontalTextAlignment="Center"/>
+
+                        <ActivityIndicator
+                             IsRunning="True" Color="White"
+                             VerticalOptions="Center" 
+                             HeightRequest="35"
+                             WidthRequest="35"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalDataAccess.MainPage" Padding="0,20,0,0">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <CollectionView x:Name="CustomersView" 
+                        SelectedItem="{Binding SelectedCustomer, 
+                                       Mode=TwoWay}"
+                        ItemsSource="{Binding Customers}" 
+                        SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Vertical" 
+                                 Margin="0,10,0,0">
+                        <Label Text="{Binding Id}" 
+                               FontSize="Medium"/>
+                        <Entry Text="{Binding CompanyName}" 
+                               FontSize="Medium" />
+                        <Entry Text="{Binding PhysicalAddress}" 
+                               FontSize="Medium"/>
+                        <Entry Text="{Binding Country}" 
+                               FontSize="Medium"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <StackLayout Orientation="Horizontal" 
+                     Spacing="5" Grid.Row="1">
+            <Button Text="Add" 
+                    Command="{Binding AddNewCommand}" 
+                    WidthRequest="90"/>
+            <Button Text="Remove" 
+                    Command="{Binding DeleteCommand}" 
+                    WidthRequest="90"/>
+            <Button Text="Save all" 
+                    Command="{Binding SaveAllCommand}" 
+                    WidthRequest="90"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

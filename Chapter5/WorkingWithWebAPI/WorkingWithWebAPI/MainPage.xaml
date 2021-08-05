@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithWebAPI.MainPage" Padding="0,20,0,0">
+
+    <Grid x:Name="LayoutRoot" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <CollectionView ItemsSource="{Binding Books}" Margin="10,0,10,0"
+                        SelectionMode="Single" SelectedItem="{Binding SelectedBook, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="10,10,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Title:" FontAttributes="Bold"/>
+                            <Label Text="{Binding Title}" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Author:" FontAttributes="Bold"/>
+                            <Label Text="{Binding Author}" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="ISBN:" FontAttributes="Bold"/>
+                            <Label Text="{Binding Isbn}" />
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Grid x:Name="NewBookGrid" IsVisible="False" BindingContext="{Binding}"
+              BackgroundColor="White" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="50"/> 
+            </Grid.RowDefinitions>
+            <StackLayout Margin="10,10,0,0" BindingContext="{Binding NewBook}">
+                <StackLayout>
+                    <Label Text="Title:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Title}" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Author:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Author}" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="ISBN:" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Isbn}" />
+                </StackLayout>
+            </StackLayout>
+            <Button Grid.Row="1" Text="Save" Command="{Binding AddBookCommand}"/>
+        </Grid>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button Text="Load books" Command="{Binding LoadBooksCommand}" />
+            <Button Text="Add book" x:Name="AddBookButton" Clicked="AddBookButton_Clicked" />
+            <Button Text="Delete book" x:Name="DeleteBookButton" Command="{Binding DeleteBookCommand}" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

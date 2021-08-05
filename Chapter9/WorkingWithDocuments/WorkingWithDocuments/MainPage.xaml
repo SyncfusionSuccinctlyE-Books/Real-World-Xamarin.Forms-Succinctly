@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithDocuments.MainPage" Padding="0,20,0,0"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
+
+    <Grid x:Name="pdfViewGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <syncfusion:SfPdfViewer 
+            x:Name="PdfViewerControl" 
+            IsToolbarVisible="True" />
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="OpenButton" 
+                    Text="Open" 
+                    Clicked="OpenButton_Clicked" />
+            <Button x:Name="ShareButton" 
+                    Text="Share" 
+                    Clicked="ShareButton_Clicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BiometricAuthentication.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter your password:" />
+            <Entry x:Name="PasswordEntry" IsPassword="True" />
+            <Button x:Name="PasswordLoginButton" 
+                    Text="Login with password" 
+                    Clicked="PasswordLoginButton_Clicked" />
+            <Button x:Name="BiometricLoginButton" 
+                    Text="Login with biometric authentication" 
+                    Clicked="BiometricLoginButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

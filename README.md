@@ -2,7 +2,7 @@
 
 This is the companion repo for [*Real-World Xamarin.Forms Succinctly*](https://www.syncfusion.com/succinctly-free-ebooks) by Alessandro Del Sole. Published by Syncfusion.
 
-[![cover](https://github.com/SyncfusionSuccinctlyE-Books/Real-World-Xamarin.Forms-Succinctly/blob/master/cover.png)](https://www.syncfusion.com/succinctly-free-ebooks)
+[![cover](https://github.com/SyncfusionSuccinctlyE-Books/Real-World-Xamarin.Forms-Succinctly/blob/main/cover.png)](https://www.syncfusion.com/succinctly-free-ebooks)
 
 ## Looking for more _Succinctly_ titles?
 

@@ -6,4 +6,4 @@ This is the companion repo for [*Real-World Xamarin.Forms Succinctly*](https://w
 
 ## Looking for more _Succinctly_ titles?
 
-Check out the entire library of more than 190 _Succinctly_ e-books at [https://www.syncfusion.com/succinctly-free-ebooks](https://www.syncfusion.com/succinctly-free-ebooks).
+Check out the entire library of more than 190 _Succinctly_ ebooks at [https://www.syncfusion.com/succinctly-free-ebooks](https://www.syncfusion.com/succinctly-free-ebooks).
